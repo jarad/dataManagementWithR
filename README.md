@@ -1,2 +1,3 @@
-# dataManagementWithR
-A repository with my approach to data management using R.
+This is a book meant to reflect my thoughts on data management. 
+
+

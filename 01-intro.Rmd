@@ -1,0 +1,6 @@
+# Introduction {#intro}
+
+Data management comprises the set of sets from data collection until data 
+analysis. 
+The intent is to be agnostic about future analyses, but to allow for a 
+wide variety of uses the data may have. 

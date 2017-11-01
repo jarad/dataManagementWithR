@@ -1,0 +1,28 @@
+# Collection {#collect}
+
+Data collection is the process of collecting data. 
+Before construction of a data collection protocol, 
+the reader should be familiar with future aspects of the data management 
+pipeline and thus I suggest reading (or at least skimming) through the remainder
+of the book in order to fully understand the suggests given here. 
+
+
+There are three main ways data are collected
+
+  1. Lab notebook or field sheets
+  1. Direct digital entry
+  1. Automated digital file
+  
+In lab notebooks or field sheets the data are written down on paper and 
+will need to be entered into a computer and saved as a digital file later. 
+In direct digital entry, a data recorded inputs the data directly into a 
+computer and saves the results as a digital file, 
+but does not have an original paper copy.
+Finally, an automated digital file is created by a machine connected to 
+a computer and the machine automatically creates a digital file.
+
+  
+## Lab notebook or field sheets
+
+
+

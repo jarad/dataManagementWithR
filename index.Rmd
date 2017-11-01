@@ -1,0 +1,26 @@
+--- 
+title: "Opinionated Data Management with R"
+author: "Jarad Niemi"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: jarad/dataManagementWithR
+description: "This is my approach to data management."
+---
+
+# Preface
+
+Data management is an integral part of reproducible scientific inquiry, 
+but it seems to not get much attention relative to the attention given to data
+analysis. 
+Thus this book presents my approach to data management using the open-source
+software R. 
+Due to the reliant or ability to use R, 
+I will generally be considering small to moderate sized data sets of the type
+typically found in research endeavours in academia. 
+My approach to data management is intended to prescriptive in that it provides
+a method to follow. 
