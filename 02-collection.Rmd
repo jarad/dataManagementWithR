@@ -6,12 +6,13 @@ the reader should be familiar with future aspects of the data management
 pipeline and thus I suggest reading (or at least skimming) through the remainder
 of the book in order to fully understand the suggests given here. 
 
+## Methods
 
-There are three main ways data are collected
+There are three main methods of data collection
 
-  1. Lab notebook or field sheets
-  1. Direct digital entry
-  1. Automated digital file
+  1. lab notebook or field sheets,
+  1. direct digital entry, and
+  1. automated digital file.
   
 In lab notebooks or field sheets the data are written down on paper and 
 will need to be entered into a computer and saved as a digital file later. 
@@ -20,9 +21,82 @@ computer and saves the results as a digital file,
 but does not have an original paper copy.
 Finally, an automated digital file is created by a machine connected to 
 a computer and the machine automatically creates a digital file.
+  
+For each of these methods,
 
   
-## Lab notebook or field sheets
+### Lab notebook or field sheets
 
+In field and laboratory settings, 
+data are often recorded using pen on paper. 
+These data are digitized and stored in a file on a computer.
+
+#### Construction of lab notebook or field sheets
+
+To make the lab notebook and field sheet amenable to digitization,
+
+
+
+### Direct digital entry
+
+
+
+### Automated digital file
+
+
+## Data standards {#standards}
+
+When writing data in a lab notebook or field sheet, 
+directly into a digital file, or through an automated digital file, 
+decisions must be made about the format to store the information.
+The key here is not so much to make the correct decision, but, instead,
+to be consistent in that decision.
+So here are my suggestions for how to store data.
+
+### Variable names
+
+I suggest that variable names follow the 
+[R convention for variable names](https://stat.ethz.ch/R-manual/R-devel/library/base/html/make.names.html)
+which can be found here:
+ 
+```{r variable_names, echo=TRUE, eval=FALSE}
+?make.names
+```
+
+In particular, a valid name consists of letters, 
+numbers, a period, and underscore characters.
+The name must start either with a letter or 
+a dot that is not followed by a number.
+The name must not be a 
+[reserved word](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Reserved.html).
+
+In addition, I suggest the use of lowercase letters except for the [key](#key)
+
+**Rationale:** Lowercase letters are easier to type since you don't need the 
+shift key.
+
+### 
+
+```{r data}
+d <- as.data.frame(HairEyeColor)
+names(d) <- tolower(names(d))
+head(d)
+```
+
+### Include a key {#key}
+
+The vast majority of data tables should have an associated 
+[key](https://en.wikipedia.org/wiki/Unique_key). 
+The key is an identifier to a record that links the record across different
+data tables.
+I identify this IDentifier using ID at the end of the variable name.
+
+### Binary data
+
+Be explicit about the two levels of binary data, 
+rather than requiring a lookup table. 
+
+For example, a variable called `political party` with levels `Democrat` and 
+`Republican` should be stored exactly as written, e.g.
 
 

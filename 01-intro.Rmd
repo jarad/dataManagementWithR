@@ -1,6 +1,46 @@
 # Introduction {#intro}
 
-Data management comprises the set of sets from data collection until data 
-analysis. 
-The intent is to be agnostic about future analyses, but to allow for a 
-wide variety of uses the data may have. 
+Data management comprises the following steps
+
+1. data collection,
+1. data cleaning,
+1. data validation,
+1. data visualization, and
+1. data analysis
+
+Thus, in this text, we will discuss each of these steps in turn and
+I will provide my opinion on how to perform these steps.
+Generally, the advice is agnostic about the software being used, 
+but in places the advice will be specific to the 
+[R software environment](http://r-project.org/).
+
+The most important part of data management is 
+
+    Have a plan and stick to it!
+    
+If you have a plan and stick to it, 
+then it will be relatively easy to make a change to the plan.
+In constrast, 
+if you don't have a plan, then all bets are off.
+
+So don't try to perfect your data management at first. 
+Instead, 
+
+1. set a plan, 
+1. periodically review the plan, and 
+1. revise the plan as needed.
+
+## Purpose
+
+Data management is one piece of the pipeline in scientific discovery and 
+development. 
+The purpose of data management is to make data analysis and 
+therefore science itself accurate, easy, and reproducible.
+
+I have some principles that aim to help the design of a data management plan
+
+- Be consistent
+- Store each piece of data only once
+- Touch the 
+
+
