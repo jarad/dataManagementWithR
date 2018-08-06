@@ -127,7 +127,7 @@ levels(d$sex)
 ```
 
 
-### Dates should be in YYYY/MM/DD format
+### Dates should be in YYYY-MM-DD format
 
 The important part here is that the date has the 4-digit year followed by the 
 2-digit month followed by the 2-digit day.
@@ -139,6 +139,10 @@ So, the dates should look like
 ```{r, echo=FALSE}
 as.Date(Sys.time())
 ```
+
+**Rationale:** This is the 
+[ISO 8601 standard](https://en.wikipedia.org/wiki/ISO_8601) and is immediately 
+recognized by R.
 
 If no day is available, then YYYY/MM will suffice and if no month is available
 then YYYY will suffice.
