@@ -1,0 +1,133 @@
+# Variables
+
+
+
+## Data standards {#standards}
+
+When writing data in a lab notebook or field sheet, 
+directly into a digital file, or through an automated digital file, 
+decisions must be made about the format to store the information.
+The key here is not so much to make the correct decision, but, instead,
+to **be consistent** in that decision.
+So here are my suggestions for how to store data.
+
+### Variable names
+
+I suggest that variable names follow the 
+[R convention for variable names](https://stat.ethz.ch/R-manual/R-devel/library/base/html/make.names.html)
+which can be found here:
+ 
+```{r variable_names, echo=TRUE, eval=FALSE}
+?make.names
+```
+
+In particular, a valid name consists of letters, 
+numbers, periods ("."), and underscores ("_").
+The name must start either with a letter or 
+a dot that is not followed by a number.
+The name must not be a 
+[reserved word](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Reserved.html).
+
+In addition, I suggest the use of lowercase letters except for the [key](#key)
+
+**Rationale:** Lowercase letters are easier to type since you don't need the 
+shift key.
+
+#### Example
+
+In the following data set, 
+the variable names are the column names and each is constructed from
+lower case letters. 
+
+```{r data}
+d <- as.data.frame(HairEyeColor)
+names(d) <- tolower(names(d))
+names(d)[4] <- "count"
+d
+```
+
+
+
+### Categorical data
+
+Be explicit about the levels of categorical data, 
+rather than requiring a lookup table. 
+
+#### Example
+
+Prefer 
+
+```{r}
+head(d)
+```
+
+to
+
+```{r, echo=FALSE}
+d2 <- d
+
+d2$hair <- as.numeric(d2$hair)
+d2$eye  <- as.numeric(d2$eye)
+d2$sex  <- as.numeric(d2$sex)
+```
+
+```{r}
+head(d2)
+```
+
+where the lookup tables are given below
+
+```{r}
+levels(d$hair)
+levels(d$eye)
+levels(d$sex)
+```
+
+
+### Dates should be in YYYY-MM-DD format
+
+The important part here is that the date has the 4-digit year followed by the 
+2-digit month followed by the 2-digit day, i.e. YYYYMMDD order.
+It is really fine to use any separator (or none),
+but if you use "/" or "-", then R can easily read the date.
+
+So, the dates should look like
+
+```{r, echo=FALSE}
+as.Date(Sys.time())
+```
+
+**Rationale:** This is the 
+[ISO 8601 standard](https://en.wikipedia.org/wiki/ISO_8601) and is immediately 
+recognized by R.
+
+If no day is available, then YYYY/MM will suffice and if no month is available
+then YYYY will suffice.
+
+If you want more detailed time, e.g. hours, minutes, and seconds, 
+then record using YYYY/MM/DD HH:MM:SS using 24-hour time. 
+The time zone could also be included to reduce confusion.
+For example,
+
+```{r, echo=FALSE}
+Sys.time()
+```
+
+
+
+
+### Include a key {#key}
+
+In order to record each piece of data only once, 
+data tables will need to be constructed such that they can borrow information
+in the future. 
+In order for records in different tables to be able to reference each other
+each data table should have a column that contains a
+[key](https://en.wikipedia.org/wiki/Unique_key) for each record.
+The key is an identifier to a record that links the record across different
+data tables.
+I identify this IDentifier using ID at the end of the variable name where
+ID is intentionally written in capital letters to make it stand out from the
+other variable names.
+
+
