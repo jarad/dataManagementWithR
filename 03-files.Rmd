@@ -1,0 +1,138 @@
+# Files {#files}
+
+After data has been collected, 
+it must be digitized in order to be utilized in data analysis.
+Thus a consistent file structure including directories and files must be 
+decided upon and adhered to in order to make writing scripts feasible.
+
+We generally put all of our data in an R package for easy loading in R and 
+thus the directory and file structure that we discuss below will be in the 
+[`data-raw/`](http://r-pkgs.had.co.nz/data.html#data-data) folder in an R 
+package.
+But the advice given here is not specific to the development of an R package 
+and instead could be used on any directory on your computer.
+(Advice specific to an R package will be put in parentheses.)
+
+In this chapter, 
+we will discuss 
+[directory structures](#directories), 
+[data files](#data-files), 
+[scanned data sheets](#scanned-data-sheets), 
+[instruction files](#instruction-files), and 
+[other files](#other-files).
+We promote a *lots of little files* approach in order to abide by our 
+``Don't touch the raw data'' principle. 
+Once a raw data file has been created, 
+it should only be read from. 
+Thus there will be lots of directories and relatively few files per directory.
+
+
+## Directories
+
+Generally, I prefer to have a single directory (or R package) for all data 
+from a particular project. 
+Unfortunately a *project* is often not well defined as projects often overlap
+and are inconsistent in their scope.
+So, at the top most level, do your best to keep an organization that works for 
+you.
+
+### Directories for specific data types
+
+At the next level, 
+you should make directories for each different type of data that you will be 
+recording. 
+If all the data files within this directory have the same structure, 
+then the scripts that will be written to combine these data will be relatively 
+simple. 
+If the data files are markedly different from each other, 
+then it will make writing scripts difficult.
+The name of the directory should coincide with the type of data the directory
+will contain (which will also be the name of the `data.frame` in the R package).
+
+As example, the ISU Monarch team has the following directories for different
+data types and therefore directories: 
+bee, daubenmire, environment, landscape, monarch, and nectar. 
+
+### Subdirectories for data files
+
+Within these main directories, there will be subdirectories that contain the 
+data files. 
+We suggest the subdirectories be set up with the following structure:
+year (YYYY) then month (MM) then day (DD) and then Recorder where the 
+YYYY/MM/DD is the date the data were collected and Recorder is the individual
+who collected the data.
+
+The reason for this structure is so that once the data files have been created
+for a particular time frame, 
+those directories never need to be changed again. 
+For example, once all the Recorders have entered their data from 2016/06/25,
+then that folder becomes *static* and once all data from 2016 have been entered
+the 2016 folder becomes *static*.
+
+
+## Data files
+
+Most of the subdirectories will be empty of any files; 
+only at the lowest subdirectory level will there be files. 
+So, in the YYYY/MM/DD/Recorder subdirectory there will be a few data files, 
+i.e. whatever data files that Recorder collected on that particular day.
+
+### File names
+
+These files should have an informative name that will depend on the type of 
+data that are being collected. 
+The filenames will likely include information on the experimental unit the data
+were collected on, e.g. site, field, etc. 
+The filename may also include information about the time of day in HH_DD format.
+Distinct pieces of information should be separated by an underscore, "_". 
+As an example, suppose siteA was surveyed at 1:30 in the afternoon, 
+then a filename might start `HH_DD_siteA`. 
+The key here is that file names should **be consistent**. 
+
+There are a number of other suggestions at 
+[Stanford's File Naming Suggestions](https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming).
+
+### File formats
+
+Data files should be in a non-proprietary format whenever possible.
+For the small amounts of data that most of us have, 
+a plain text file, which means it is human readable, is sufficient. 
+Among the plain text file formats, 
+comma-separated value (csv) files and tab- or space-delimited (txt) files are 
+commonly used.
+
+Proprietary formats should be avoided to avoid data loss when the format 
+changes. 
+
+There are a number of other suggestions at 
+[Stanford's File Format Suggestions](https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-formats).
+
+
+## Scanned data sheets
+
+If the data is being digitized based on a handwritten data sheet, 
+that data sheet should be scanned and saved with the same filename as the 
+digitized data, but with the extension changed to an image format, 
+e.g. png, jpg, or pdf.
+
+
+## Instruction files
+
+In each subdirectory containing a specific data type, 
+an instruction file should be included that describes the directory structure,
+file naming convention, and data file structure.
+A suggested name for these files are `README.txt` or `README.md`.
+
+
+
+
+## Other files
+
+Sometimes additional files, e.g. meta data files, 
+will exist within the directory structure. 
+These files should be named such that they will not interfere with scripts 
+written to extract the data files. 
+
+For example, if it makes sense to include two different data types in the 
+same directory structure, say because they are included on the same data file,
+then the extension for the files should be distinct, e.g. csv and csv2. 
