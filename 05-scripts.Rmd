@@ -1,0 +1,91 @@
+# Scripts
+
+Scripts will be utilized to perform a number of tasks once the raw data have 
+been entered including 
+[collating](#collating-scripts),
+[joining](#joining-scripts),
+[summarizing](#summarizing-scripts), and
+[analyzing](#analyzing-scripts).
+These scripts will be written in R.
+
+
+## Collating scripts
+
+As we are promoting a ``lots of little files'' approach, 
+scripts will be needed to combine these files into a single `data.frame` for 
+analysis in R.
+Since we have made sure all our data files, within a data type directory), have
+the same structure, it will be relatively easy to read all the files in and 
+combine them. 
+My generic code to perform this is available at this 
+[gist](https://gist.github.com/jarad/8f3b79b33489828ab8244e82a4a0c5b3)
+which currently contains this code
+
+```{r read_dir, eval=FALSE}
+library(dplyr)
+library(tidyr)
+
+my_read_csv = function(f, into) {
+  readr::read_csv(f) %>%
+    mutate(file=f) %>%
+    separate(file, into) 
+}
+
+read_dir = function(path, pattern, into) {
+  files = list.files(path = path,
+                   pattern = pattern,
+                   recursive = TRUE,
+                   full.names = TRUE)
+  plyr::ldply(files, my_read_csv, into = into)
+}
+```
+
+This code can then be used with a call to the `read_dir` function which will 
+read all the files in a particular directory (`path`) with a particular 
+pattern (`pattern`) in the filename, split the directory and filename
+structure into variables (`into`), and save the result as a `data.frame`.
+
+For example, suppose there is a `bee/` data directory with the YYYY/MM/DD/Recorder
+subdirectory structure and filenames HH_MM_site.csv. 
+Then from the directory below `bee/`, running the following will read all the
+`csv` files and return a `data.frame` with the variables in the data files as well as 
+day, time, site, and recorder information.
+
+```{r reading_files, eval=FALSE}
+bee <- read_dir('bee', 'csv', into = c("bee", "year", "month", "day", "recorderID"
+                                       "hour", "minute", "siteID", "csv")) %>%
+  select(-bee, -csv)
+```
+
+The `read_dir` function is set up to extract all information including 
+directory name, `bee/`, and file extension, `csv`, which will likely not be 
+needed and thus the last line will remove these variables from the created 
+`data.frame`.
+
+
+## Joining scripts
+
+As we are promoting a ``Store each piece of data only once'', 
+we will likely need to combine multiple `data.frame`s. 
+For example, suppose each site has a particular treatment and we are measure 
+a response variable multiple times on each site. 
+In this scenario, we will have (at least) two `data.frame`s:
+one that contains the site-treatment information and another that contains 
+the response variable at the sites at different times.
+Suppose that these variables are called `site` and `response` respectively and
+they have a common variable `siteID`. 
+These two `data.frame`s can be combined using the following script.
+
+```{r joining-script, eval=FALSE}
+library("dplyr")
+combined <- response %>% left_join(site, by="siteID")
+```
+
+There are additional joining functions in the `dplyr` package including `join`
+`right_join`, `full_join`, `inner_join`, etc. 
+
+
+
+## Summarizing scripts
+
+## Analyzing scripts
