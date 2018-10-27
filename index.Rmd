@@ -26,3 +26,7 @@ My approach to data management is intended to be prescriptive in that it
 provides instructions that the user can follow. 
 A user can decide to deviate from these instructions,
 but I hope this book gives some rationale for why I do what I do.
+
+## Code
+
+The code to generate this book can be found [here](https://github.com/jarad/dataManagementWithR).
