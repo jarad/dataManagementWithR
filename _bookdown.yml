@@ -4,6 +4,7 @@ rmd_files: [
   "index.Rmd",
   
   "intro.Rmd",
+  "pipeline.Rmd",
   "collection.Rmd",
   "files.Rmd",
   "variables.Rmd",

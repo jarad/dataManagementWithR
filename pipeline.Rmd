@@ -1,0 +1,116 @@
+# Data Pipeline
+
+## Introduction
+
+Researchers often consider their data static, but in reality their data are 
+dynamic and undergo modification from data collection to data analysis to 
+data publication. 
+It is helpful to have an understanding of this process so that data can be 
+managed as the dynamic object. 
+
+### A water analogy
+
+An analogy for data is water. 
+Water initially falls from the sky as rain, snow, sleet, or hail. 
+From this point water can be absorbed into the ground, it can re-evaporate,
+and it can join together to create brooks. 
+These brooks join together to form creeks then branches and then into a river. 
+This can be thought of as the process of data collection.
+
+As the water flows downstream it has many purposes. 
+For example, humans pull water from the stream for personal uses such as 
+drinking, showering, cleaning, etc.
+We also pull water for industrial purposes. 
+Animals will also drink from the water. 
+This is analogous to the many different purposes that data have including
+for journal articles, for posters or oral presentations at a conference,
+for stakeholder summaries, etc. 
+
+The process described here is a natural process and natural systems go awry. 
+A stream might flood or become dry. 
+Water might get absorbed into the ground rather than flowing downstream for its
+intended purpose. 
+The water itself gets mixed all together so that it is unclear where it came
+from. 
+In dealing with our data, we do not want to allow these natural "disasters" to 
+occur, but instead we want to exhibit more control over our data. 
+
+### Data Pipeline
+
+Rather than letting our data flow natural, we want to exhibit more control by
+constructing a data pipeline. 
+We want to be intentional about how we are dealing with the data.
+We want to back the data up so that we have multiple identical rivers so that
+a dried up riverbed does not end out scientific career. 
+
+This data pipeline is constructed of a collection of individual steps that 
+should be enumerated and described. 
+These steps may include, but are not limited to, the following possible 
+individual steps that we will describe in the remainder of this chapter:
+
+- Data Collection
+- Data Digitization
+- Data Validation
+- Data Transformation
+- Data Backup
+- Data Archiving
+- Data Analysis
+- Data Sharing
+- Data Publication
+
+These steps in a data pipeline are provided in a rough chronological order for
+how they exist in the pipeline.
+But it is important to note that some of these activities will occur 
+simultaneously and therefore the pipeline must nimble enough to handle this 
+simultaneous use. 
+
+
+## Data Collection
+
+The process of collecting data can be broadly categorized by how the data are 
+obtained and what downstream processing will need to occur. 
+These categories are 
+
+- field data sheets
+- electronic entry
+- automatic recording
+
+### Field data sheets
+
+The least technologically-savvy approach is recording data on a field data sheet
+or laboratory notebook. 
+This means that someone is physically writing the data down onto a piece of 
+loose-leaf or bound paper.
+These data will need to be entered in the Data Digitization step in order for 
+useful analyses to be performed. 
+
+### Electronic entry
+
+More and more field and laboratory data are entered directly into an electronic 
+form by a researcher bypassing the physical piece of paper. 
+This step bypasses the need for a Data Digitization step, but care is required
+in developing the electronic entry system to ensure data quality because there
+is no alternative record as a backup. 
+
+
+### Automatic recording
+
+With all automation, field and laboratory research is becoming automated via 
+the use of electronic systems that automatically record data. 
+These systems require calibration to ensure data quality and must be checked
+frequently to ensure the systems are operating properly. 
+
+
+## Data Digitization
+
+When data are recorded in a field data sheet or a laboratory notebook, 
+they will then need to be digitized, i.e. entered into an electronic form. 
+
+
+## Data Validation
+## Data Transformation
+## Data Backup
+## Data Archiving
+## Data Analysis
+## Data Sharing
+## Publication
