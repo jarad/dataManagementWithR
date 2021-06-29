@@ -33,3 +33,6 @@ _book/
 *.utf8.md
 *.knit.md
 .Rproj.user
+
+# bookdown auxiliary files
+*.rds

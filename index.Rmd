@@ -1,4 +1,5 @@
 --- 
+knit: "bookdown::render_book"
 title: "Opinionated Data Management with R"
 author: "Jarad Niemi"
 date: "`r Sys.Date()`"
