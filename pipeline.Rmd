@@ -105,12 +105,91 @@ frequently to ensure the systems are operating properly.
 
 When data are recorded in a field data sheet or a laboratory notebook, 
 they will then need to be digitized, i.e. entered into an electronic form. 
+This process needs to be documented so that folder structure and filenames as 
+well as file structure are all consistent amongst the various times data are 
+entered and individuals who are entering the data. 
 
 
 ## Data Validation
+
+For all types of data collection, the data need to be checked and quality of the
+data assessed. The process falls under the misleadingly exact heading of 
+"validation". In reality, data are never validated, but instead we would like to
+decrease the probability of data errors especially those types of data errors
+that would drastically alter our understanding of the phenomenon under study. 
+
+Within validation, we have two steps: data quality assurance and data quality 
+control. Data quality assurance is a proactive process where we define how we 
+will test the data. Data quality control is process of running those tests are 
+fixing errors as they arise. The depth of testing directly controls the 
+probability of undetected errors with more depth resulting in fewer undetected
+errors. 
+
+
 ## Data Transformation
-## Data Backup
-## Data Archiving
+
+Typically digitized data are not in a format suitable for analysis, but instead
+are typically found in many different files with multiple different structures.
+Data transformation is the process of reading all these files in and organizing
+the data in a way suitable for analysis.
+There typically is not just one format, but different formats for different
+types of analyses. 
+The data transformation process includes joining data sets, unit conversions,
+creating derived variables, etc. 
+
 ## Data Analysis
+
+Once suitably transformed, the data are analyzed to extract information and 
+provide scientific insights and, possibly, affect decisions. 
+These analyses may be exploratory via figures and tables, but may also 
+involve construction of statistical models which may also be summarized in 
+figures and tables. 
+The use of scripts in the data transformation and analysis steps will enable 
+quick re-analysis when erroneous data are identified and corrected. 
+
+## Data Backup
+
+Unforeseen natural events as well as electronics failures suggest that we should
+back up our data as well as the process used to transform and analyze that data. 
+Thus we should have a plan for regular backups of our data and 
+scripts so that in the event of destruction of some or all of our data and 
+scripts, we can be back up and running as quickly as possible. 
+
+## Data Archiving
+
+Eventually we will move out of actively collecting, transforming, and analyzing
+data. 
+At this point, we will want to archive the data for future use. 
+This can be a natural extension of backing up the data, but it can also 
+including moving the data to an archiving platform where there is a guarantee
+of future longevity of the data that may not exist with our current data storage
+and backup. 
+
+
 ## Data Sharing
-## Publication
+
+Typically data will be shared at many points along the data pipeline including
+for interim analyses and analyses associated with a publication. 
+Compared to the massive river of data being collected and transformed, 
+data sharing will often be for only a subset of the overall collection.
+Documenting who has access to what data and what data are shared with whom will 
+ensure that when errors are identified, in any aspect of the data pipeline,
+downstream users can be notified of those changes and can update their analyses.
+
+## Data Publication
+
+While data sharing is typically private, i.e. the data are shared with a select
+number of individuals who are expected to keep the data in confidence, 
+data publication is releasing the data (and scripts) publicly for the benefit 
+of society. 
+This benefit is increasingly understood by funding agencies who often require
+publication of data in return for funding. 
+
+In addition to the release of a location for data access, data publication 
+usually requires effort spent to make the data useful by including documentation
+of how the data were collected, steps taken for data validation, well-commented 
+scripts associated with transformation and analysis, etc. 
+Time spent during the development of the data pipeline to document the 
+process reduces time spent on this documentation upon data publication.
+
+## Summary
