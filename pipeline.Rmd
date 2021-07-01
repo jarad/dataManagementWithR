@@ -193,3 +193,8 @@ Time spent during the development of the data pipeline to document the
 process reduces time spent on this documentation upon data publication.
 
 ## Summary
+
+The purpose of this chapter was to provide an overview of the data pipeline,
+a constantly evolving process of modifying data to suit a purpose. 
+In order to understand how to manage data, you will need to have an understading
+that data are dynamic rather than statis and manage accordly. 

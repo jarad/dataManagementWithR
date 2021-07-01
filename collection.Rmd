@@ -6,13 +6,11 @@ the reader should be familiar with future aspects of the data management
 pipeline and thus I suggest reading (or at least skimming) through the remainder
 of the book in order to fully understand the suggests given here. 
 
-## Methods
-
 There are three main methods of data collection
 
   1. manual entry,
   1. digital entry, and
-  1. automated digital file.
+  1. automated digital process.
   
 In manual entry the data are written down on paper and 
 will need to be entered into a computer and saved as a digital file later. 
@@ -22,25 +20,27 @@ computer and saves the results as a digital file,
 but does not have an original paper copy.
 Finally, an automated digital file is created by a machine connected to 
 a computer and the machine automatically creates a digital file.
-  
-For each of these methods,
 
   
-### Lab notebook or field sheets
+## Manual entry
 
 In field and laboratory settings, 
 data are often recorded using pen on paper. 
-These data are digitized and stored in a file on a computer.
+Eventually these data will be recorded on in a digital, and therefore usable,
+format, but, as collected, the data are distinctly unusable. 
 
-#### Construction of lab notebook or field sheets
+
+
+### Construction of lab notebook or field sheets
 
 To make the lab notebook and field sheet amenable to digitization,
+contruction of these 
 
 
 
-### Direct digital entry
+## Digital entry
 
 
 
-### Automated digital file
+## Automated digital process
 
